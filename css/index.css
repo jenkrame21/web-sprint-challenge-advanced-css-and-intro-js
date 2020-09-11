@@ -14,7 +14,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {  
 margin: 0;  
 padding: 0;  
-border: 1px solid blue;  
+border: 0;  
 font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
@@ -136,8 +136,6 @@ button:hover{
 }
 
 @media (max-width:500px){
-    /*GENERAL STYLES*/
-
     /*HEADER STYLES */
     header{
         display:flex;
@@ -153,16 +151,17 @@ button:hover{
     }
     /*Title Section Styles*/
     .title-container div {		
-        background-position: center;	
-        color: white;	
-        max-width:80%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: 100%;
+        vertical-align: middle;
+        background-size: cover;
+        background-position:center;
+        background-repeat: none;
         height:20vh;
-        margin: 5% 0;
+        margin:1%;
+    }
+    .title-container hr{
+        width:80%;
     }
     h1{
         font-size:3.3rem;
@@ -184,16 +183,21 @@ button:hover{
         width:80%;
         margin:0 auto;
     }
-    
     .artist{
         width:100%;
         text-align:center;
     }
     .artist img{
         width:50%;
+        height:100%;
+    }
+    .artist a{
+        font-size:2rem;
     }
     div.bio{
-        font-size:1.3rem;
+        font-size:1.2rem;
+        width:100%;
+        margin:2% 0;
     }
     
 }
