@@ -135,13 +135,37 @@ button:hover{
     width:100%;
 }
 
-@media open and (min-width:500px){
+@media (max-width:500px){
     /*GENERAL STYLES*/
 
     /*HEADER STYLES */
-
+    header{
+        display:flex;
+        justify-content:space-evenly;
+    }
+    nav{
+        width:45%;
+    }
+    nav a{
+        display:flex;
+        justify-content:space-evenly;
+        font-size:1.7rem;
+    }
     /*Title Section Styles*/
-
+    .title-container{
+        height:50%;
+    }
+    .title-container div {		
+        background-position: center;	
+        color: white;	
+        width:80%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:60vh;
+        margin:5% 0;
+    }
     /*Artists Section Styles */
-    
+
 }
