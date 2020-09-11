@@ -142,7 +142,10 @@ button:hover{
         justify-content:space-evenly;
     }
     nav{
-        width:45%;
+        width:40%;
+    }
+    nav span{
+        border-left:2px solid #626262;
     }
     nav a{
         display:flex;
@@ -159,9 +162,7 @@ button:hover{
         background-repeat: none;
         height:20vh;
         margin:1%;
-    }
-    .title-container hr{
-        width:80%;
+        margin-top:5%;
     }
     h1{
         font-size:3.3rem;
