@@ -14,7 +14,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {  
 margin: 0;  
 padding: 0;  
-border: 0;  
+border: 1px solid blue;  
 font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
@@ -133,4 +133,15 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+@media open and (min-width:500px){
+    /*GENERAL STYLES*/
+
+    /*HEADER STYLES */
+
+    /*Title Section Styles*/
+
+    /*Artists Section Styles */
+    
 }
