@@ -233,19 +233,37 @@ function getArtistByIndex(array, index) {
 console.log(getArtistByIndex(artists, 0));
   /**
 
-/* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
+/* Task 4:
+- Create a function called get20s() that
+- takes data as an argument and 
+- returns an array with names of artists who were born in and died in 20th century (1900-2000) 
+- example born in 1901 and died in 1959 - included 
+- born in 1889 and died in 1925 not included 
+- should return ["Salvador Dali", "Frida Kahlo"]*/
+
+//I feel like there should be an .includes
 
 // function get20s(arr, str) {
 //   for (let i = 0; i < arr.length; i++) {
-//       if(arr[i] === str) {
-//         
-//       }
+//     if(arr[i] === str) {
+//     }
 //   }
 //   return arr;
 // }
-
 // console.log(get20s(artists));
 
+function get20s(data){
+  let newArr = []
+  for (let i = 0; i < newArr.length; i++) {
+    if ((years > 1900)) {        
+      data = "Included";
+    } else {
+      status = "Not included.";
+    }
+  return newArr
+  }
+}
+console.log(get20s(data).name);
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -281,11 +299,22 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+const Jenn ={
+  id: 20,
+  name: "Jennifer Kramer",
+  years: "1989 - September 11th, 2020",
+  genre: "Web Design",
+  nationality: "American",
+  bio: "Jennifer Kramer has been known for her work of creating digital paintings of women lacking no eyes with animals surrouding them. Her philosophy through art is that nature and humans are connected and believes showing eyes attention away from the rest of the piece."
+}
 
-    /* Code here */
-
+function addArtist(you, artists){
+  let you = []
+  Object.create(newArtistArray)
+  you.push(artists);
+  return artists
   }
+console.log(addArtist(you, artists))
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -295,12 +324,12 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
+function lotsOfArt(arr){
+  let newArr = []
+  returns arr;
 
 }
-
+console.log(lotsOfArtists(artists.name));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
