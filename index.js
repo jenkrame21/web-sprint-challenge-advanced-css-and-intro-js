@@ -238,32 +238,24 @@ console.log(getArtistByIndex(artists, 0));
 - takes data as an argument and 
 - returns an array with names of artists who were born in and died in 20th century (1900-2000) 
 - example born in 1901 and died in 1959 - included 
-- born in 1889 and died in 1925 not included 
+- born in 1889 and died in 1925 - not included 
 - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-//I feel like there should be an .includes
-
-// function get20s(arr, str) {
-//   for (let i = 0; i < arr.length; i++) {
-//     if(arr[i] === str) {
-//     }
-//   }
-//   return arr;
-// }
-// console.log(get20s(artists));
+//NOTES
+// years.split =
+// "1884 - 1920"
+// [1884],[1920]
 
 function get20s(data){
-  let newArr = []
-  for (let i = 0; i < newArr.length; i++) {
-    if ((years > 1900)) {        
-      data = "Included";
-    } else {
-      status = "Not included.";
+  let newArr = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].years.split(' - ') >= "1900" && data[i].years.split(' - ') <= "2000") {
+      newArr.push(data[i].name);
     }
-  return newArr
   }
+  return newArr;
 }
-console.log(get20s(data).name);
+console.log(get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -276,15 +268,11 @@ console.log(get20s(data).name);
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 
-function removeArtist(arr, ind) {
-  for (let i = 0; i < arr.length; i++) {
-    if(arr[i] === ind) {
-      arr.splice(i,1);
-    }
-  }
-  return arr;
+function removeArtist(arr, index) {
+  arr.splice(index,1);
+  return arr.length;
 }
-console.log(removeArtist(artists, 0));
+console.log(removeArtist(artists,0));
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -299,22 +287,19 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-const Jenn ={
-  id: 20,
-  name: "Jennifer Kramer",
-  years: "1989 - September 11th, 2020",
-  genre: "Web Design",
-  nationality: "American",
-  bio: "Jennifer Kramer has been known for her work of creating digital paintings of women lacking no eyes with animals surrouding them. Her philosophy through art is that nature and humans are connected and believes showing eyes attention away from the rest of the piece."
-}
-
-function addArtist(you, artists){
-  let you = []
-  Object.create(newArtistArray)
-  you.push(artists);
-  return artists
+function addArtist(arr){
+  const Jenn = {
+    id: 20,
+    name: "Jennifer Kramer",
+    years: "1989 - September 11th, 2020",
+    genre: "Web Design",
+    nationality: "American",
+    bio: "Jennifer Kramer has been known for her work of creating digital paintings of women lacking no eyes with animals surrouding them. Her philosophy through art is that nature and humans are connected and believes showing eyes attention away from the rest of the piece."
   }
-console.log(addArtist(you, artists))
+  arr.push(Jenn);
+  return arr
+}
+console.log(addArtist(artists));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -325,11 +310,15 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(arr){
-  let newArr = []
-  returns arr;
-
+  const newArr = []
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].paintings > 100){
+      newArr.push(arr[i].name);
+    }
+  }
+  return newArr;
 }
-console.log(lotsOfArtists(artists.name));
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
